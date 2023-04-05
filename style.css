@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Root é o html. Body bg e purple definidos pelo projeto */
+:root {
+    --body-bg-color: #FAF7FD;
+    --purple: #BB99DD;
+  }
+
+/* Text decoration tira o sublinhado dos links */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}  
+
+/* O var busca a variável citada no root (caso fosse no lugar do body bg) */
+body {
+    font-family: 'Poppins';
+    background-color: var(--body-bg-color)
+}
+
+/* Elementos flexíveis e centralizados */
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .tree-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+    
+
+.tree-container .avatar {
+    width: 213px;
+    height: 213px;
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    border: 1px solid var(--purple);
+    border-radius: 50%;
+}
+
+.tree-container .avatar img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.tree-container .insta-user {
+    margin-top: 15px;
+    color:#BB99DD
+}
+
+.tree-container .links-container {
+    margin-top: 17px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-container .link {
+    margin-top: 16px;
+    width: 326px;
+    height: 49px;
+
+    border-radius: 4px;
+    border: 2px solid var(--purple);
+
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: var(--purple);
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 12px 0;
+    transition: ease 0.3s;
+}
+
+/* hover - mouse passa por cima do elemento */
+
+.links-container .link:hover {
+    background: var(--purple);
+    color: var(--white-light);
+}    
+
+
+/* Display grid são grades. Define depois como 5 colunas e 1 fração. 
+Gap é o espaço entre os elementos */
+.tree-container .social-container {
+    margin-top: 68px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 29px;
+}
+
+.socials-contaier .social {
+    transform: scale(0.9);
+    
+    transition: ease 0.3s;
+}
+
+.socials-container .social:hover {
+    transform: scale(1);
+}
+
+
+
+
